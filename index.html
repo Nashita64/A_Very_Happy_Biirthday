@@ -20,7 +20,7 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            font-family: 'Comic Sans MS', cursive, sans-serif; /* Added a cute and informal font */
+            font-family: 'Comic Sans MS', cursive, sans-serif;
         }
 
         .container {
@@ -31,7 +31,7 @@
         h1 {
             color: white;
             font-size: 3em;
-            font-weight: lighter; /* Made the font weight lighter */
+            font-weight: lighter;
         }
 
         p {
@@ -62,7 +62,6 @@
             margin-top: 20px;
         }
 
-        /* Added styles for the popup paragraph */
         #popup {
             display: none;
             position: fixed;
@@ -83,16 +82,19 @@
     <div class="container mt-5 animated">
         <h1 class="display-3">Happy Birthday, Kamaal!</h1>
         <p class="lead">Wishing you a fantastic day filled with joy and celebration.</p>
+        <button onclick="showPopup()">Show Popup</button>
     </div>
 
     <div class="container paragraph">
         <p>
-            Many many happy returns of the day to the one person who stands out from the crowd because of his nature, his patience and nonpareil supportive aptitude. 
-I may not be the best person you've met but I'll try not be the worst one either, to be by your side in distress and to make you laugh when you feel down. 
-Every moment in the past few months that we've got to spend together has been one of the most prized possession of mine.
-From that one question on snapchat whether u r John Elia from DH, our bond grew to become so priceless that I'm grateful to Allah for letting u be the part of my mess. 
-Sometimes I annoy a lot, I act immature, suffer from bad days but at the end of the day, I'll always be there for my friend and make dua for your progress.
-Always be happy for u r born for that.
+            Many many happy returns of the day to the one person who stands out from the crowd because of his nature,
+            his patience and nonpareil supportive aptitude. I may not be the best person you've met but I'll try not be
+            the worst one either, to be by your side in distress and to make you laugh when you feel down. Every moment
+            in the past few months that we've got to spend together has been one of the most prized possession of mine.
+            From that one question on snapchat whether u r John Elia from DH, our bond grew to become so priceless
+            that I'm grateful to Allah for letting u be the part of my mess. Sometimes I annoy a lot, I act immature,
+            suffer from bad days but at the end of the day, I'll always be there for my friend and make dua for your
+            progress. Always be happy for u r born for that.
         </p>
     </div>
 
@@ -107,7 +109,6 @@ Always be happy for u r born for that.
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 
-    <!-- Popup script -->
     <script>
         function showPopup() {
             document.getElementById('popup').style.display = 'block';
