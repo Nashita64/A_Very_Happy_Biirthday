@@ -13,7 +13,7 @@
 
     <style>
         body {
-            background: linear-gradient(to right, #87CEEB, #00BFFF);
+            background: linear-gradient(to right, #00FFFF, #00BFFF);
             color: white;
             display: flex;
             align-items: center;
@@ -68,11 +68,12 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: rgba(255, 255, 255, 0.9);
+            background: linear-gradient(to right, #FFD700, #FF8C00);
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
             z-index: 1;
+            color: #333; /* Changed the font color */
         }
     </style>
 </head>
@@ -83,19 +84,6 @@
         <h1 class="display-3">Happy Birthday, Kamaal!</h1>
         <p class="lead">Wishing you a fantastic day filled with joy and celebration.</p>
         <button onclick="showPopup()">Show Popup</button>
-    </div>
-
-    <div class="container paragraph">
-        <p>
-            Many many happy returns of the day to the one person who stands out from the crowd because of his nature,
-            his patience and nonpareil supportive aptitude. I may not be the best person you've met but I'll try not be
-            the worst one either, to be by your side in distress and to make you laugh when you feel down. Every moment
-            in the past few months that we've got to spend together has been one of the most prized possession of mine.
-            From that one question on snapchat whether u r John Elia from DH, our bond grew to become so priceless
-            that I'm grateful to Allah for letting u be the part of my mess. Sometimes I annoy a lot, I act immature,
-            suffer from bad days but at the end of the day, I'll always be there for my friend and make dua for your
-            progress. Always be happy for u r born for that.
-        </p>
     </div>
 
     <!-- Bootstrap JS -->
@@ -122,7 +110,14 @@
     <!-- Popup content -->
     <div id="popup">
         <p>
-            Thank you for visiting! Your warm wishes mean a lot. Have a wonderful day!
+            Many many happy returns of the day to the one person who stands out from the crowd because of his nature,
+            his patience and nonpareil supportive aptitude. I may not be the best person you've met but I'll try not be
+            the worst one either, to be by your side in distress and to make you laugh when you feel down. Every moment
+            in the past few months that we've got to spend together has been one of the most prized possession of mine.
+            From that one question on snapchat whether u r John Elia from DH, our bond grew to become so priceless
+            that I'm grateful to Allah for letting u be the part of my mess. Sometimes I annoy a lot, I act immature,
+            suffer from bad days but at the end of the day, I'll always be there for my friend and make dua for your
+            progress. Always be happy for u r born for that.
         </p>
         <button onclick="closePopup()">Close</button>
     </div>
