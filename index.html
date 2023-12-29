@@ -32,13 +32,13 @@
             color: white;
             font-size: 3em;
             font-weight: lighter;
-            animation: bounce 2s ease infinite;
+            animation: bounce 2s ease infinite; /* Added bounce animation */
         }
 
         p {
             color: white;
             font-size: 1.2em;
-            animation: fadeIn 2s ease;
+            animation: fadeIn 2s ease; /* Added fadeIn animation */
         }
 
         @keyframes scale {
@@ -101,7 +101,7 @@
             z-index: 1;
             color: #eee;
             max-width: 80vw;
-            animation: slideIn 1s ease;
+            animation: slideIn 1s ease; /* Added slideIn animation */
         }
 
         button {
@@ -111,7 +111,7 @@
             color: white;
             font-size: 1em;
             cursor: pointer;
-            animation: pulse 1s ease infinite;
+            animation: pulse 1s ease infinite; /* Added pulse animation */
         }
 
         button:hover {
@@ -138,73 +138,6 @@
             }
         }
     </style>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const canvas = document.getElementById("fireworksCanvas");
-            const ctx = canvas.getContext("2d");
-
-            function fireworksAnimation() {
-                const particles = [];
-                const particleCount = 100;
-
-                function Particle() {
-                    this.x = canvas.width / 2;
-                    this.y = canvas.height;
-                    this.radius = Math.random() * 3 + 1;
-                    this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
-                    this.speedX = Math.random() * 6 - 3;
-                    this.speedY = Math.random() * -10 - 5;
-                    this.opacity = 1;
-                }
-
-                function createParticles() {
-                    for (let i = 0; i < particleCount; i++) {
-                        particles.push(new Particle());
-                    }
-                }
-
-                function drawParticles() {
-                    particles.forEach((particle) => {
-                        ctx.beginPath();
-                        ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-                        ctx.fillStyle = particle.color;
-                        ctx.globalAlpha = particle.opacity;
-                        ctx.fill();
-                        ctx.globalAlpha = 1;
-                        ctx.closePath();
-                    });
-                }
-
-                function updateParticles() {
-                    particles.forEach((particle, index) => {
-                        particle.x += particle.speedX;
-                        particle.y += particle.speedY;
-                        particle.opacity -= 0.02;
-
-                        if (particle.opacity <= 0) {
-                            particles.splice(index, 1);
-                        }
-                    });
-                }
-
-                function animate() {
-                    ctx.clearRect(0, 0, canvas.width, canvas.height);
-                    createParticles();
-                    drawParticles();
-                    updateParticles();
-                    requestAnimationFrame(animate);
-                }
-
-                animate();
-            }
-
-            // Start fireworks animation when the button is clicked
-            document.getElementById("fireworksButton").addEventListener("click", function () {
-                fireworksAnimation();
-            });
-        });
-    </script>
 </head>
 
 <body>
@@ -225,9 +158,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-
-    <canvas id="fireworksCanvas" width="600" height="400" style="display: block; margin: auto;"></canvas>
-    <button id="fireworksButton">Click for Fireworks</button>
 
     <script>
         function showPopup() {
