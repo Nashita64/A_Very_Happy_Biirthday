@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday, Kamaal Zakir!</title>
+    <title>Happy Birthday, Kamaal!</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -12,13 +13,14 @@
 
     <style>
         body {
-            background: linear-gradient(to right, #4A00E0, #8E2DE2);
+            background: linear-gradient(to right, #87CEEB, #00BFFF);
             color: white;
             display: flex;
             align-items: center;
             justify-content: center;
             height: 100vh;
             margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Added a cute and informal font */
         }
 
         .container {
@@ -29,6 +31,7 @@
         h1 {
             color: white;
             font-size: 3em;
+            font-weight: lighter; /* Made the font weight lighter */
         }
 
         p {
@@ -53,14 +56,40 @@
         .animated {
             animation: scale 2s infinite;
         }
+
+        .paragraph {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        /* Added styles for the popup paragraph */
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 1;
+        }
     </style>
 </head>
 
 <body>
 
     <div class="container mt-5 animated">
-        <h1 class="display-3">Happy Birthday, Kamaal Zakir!</h1>
+        <h1 class="display-3">Happy Birthday, Kamaal!</h1>
         <p class="lead">Wishing you a fantastic day filled with joy and celebration.</p>
+    </div>
+
+    <div class="container paragraph">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed imperdiet arcu non ullamcorper venenatis.
+            Integer ac purus ut odio tristique convallis in id turpis.
+        </p>
     </div>
 
     <!-- Bootstrap JS -->
@@ -73,6 +102,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+
+    <!-- Popup script -->
+    <script>
+        function showPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+
+    <!-- Popup content -->
+    <div id="popup">
+        <p>
+            Thank you for visiting! Your warm wishes mean a lot. Have a wonderful day!
+        </p>
+        <button onclick="closePopup()">Close</button>
+    </div>
 
 </body>
 
